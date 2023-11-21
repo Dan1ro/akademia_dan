@@ -42,6 +42,34 @@ public function inserirUsuario()
 
 
 
+public function listaruser1()
+{
+    include_once("db/conn.php");
+
+    $sql = "CALL psUsuario('')";
+    $data = $conn->query($sql)->fetchAll();
+
+    return $data;
+}
+
+public function DeleteUser($_id)
+{
+
+    include_once("db/conn.php");
+    $sql = "CALL pdUsuario(:idUsuario)";
+
+    $data = [
+
+        'idUsuario'=>$_id
+
+    ];
+
+    $statement = $conn->prepare($sql);
+    $statement->execute($data);
+
+    return true;
+
+}
 
 
 

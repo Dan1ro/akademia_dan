@@ -1,6 +1,6 @@
 <?php
     include_once("class/usuario.php");
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,10 +8,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="ReplicaSiteFigma/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
 
     <title>Cadastrar</title>
 </head>
@@ -54,5 +55,42 @@
 
     </form>
 
+    
+    
+    <?php
+
+        include_once("class/usuario.php");
+
+        $u = new Usuario();
+        $listarusuario = $u->listaruser1();
+
+        echo "<table>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Dt.Nasc</th>
+            <th>Cidade</th>
+            <th>Senha</th>
+        </tr>";
+
+        foreach ($listarusuario as $item) {
+            echo "
+            <tr>
+            <td> " . $item["nome"] . "</td>
+            <td> " . $item["email"] . "</td>
+            <td> " . $item["dtNascimento"] . "</td>
+            <td> " . $item["cidade"] . "</td>
+            <td> " . $item["senha"] . "</td>
+            <td> <a href='excluirUsuario.php?pid=" . $item["idUsuario"] .  "'>Excluir</a> </td>
+             </tr>";
+
+        }
+        
+        echo "</table>";
+    
+    ?>
+   
+
 </body>
 </html>
+
