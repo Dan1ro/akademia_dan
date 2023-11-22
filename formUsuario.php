@@ -81,7 +81,7 @@
             <td> " . $item["dtNascimento"] . "</td>
             <td> " . $item["cidade"] . "</td>
             <td> " . $item["senha"] . "</td>
-            <td> <a href='excluirUsuario.php?pid=" . $item["idUsuario"] .  "'>Excluir</a> </td>
+            <td> <a href='excluirUsuario.php?pid=" . $item["idUsuario"] .  "'onClick='return confirmar()'>Excluir<a/> </td>
              </tr>";
 
         }
