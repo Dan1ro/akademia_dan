@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="ReplicaSiteFigma/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
@@ -17,6 +16,8 @@
     <title>Cadastrar</title>
 </head>
 <body>
+
+<main>
         <h1>Cadastrar Usuario</h1>
 
         <h2>Novo usuario</h2>
@@ -56,7 +57,7 @@
     </form>
 
     
-    
+
     <?php
 
         include_once("class/usuario.php");
@@ -82,14 +83,16 @@
             <td> " . $item["cidade"] . "</td>
             <td> " . $item["senha"] . "</td>
             <td> <a href='excluirUsuario.php?pid=" . $item["idUsuario"] .  "'onClick='return confirmar()'>Excluir<a/> </td>
+            <td> <a href='editarUsuario.php?pid=" . $item["idUsuario"] .  "'>Editar</a> </td>
              </tr>";
 
         }
         
         echo "</table>";
-    
+
     ?>
-   
+
+</main>
 
 </body>
 </html>
