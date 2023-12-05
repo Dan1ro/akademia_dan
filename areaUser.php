@@ -15,12 +15,18 @@ include("class/usuario.php");
 
     <?php 
     
-        session_start();
-        echo "<p>Bem vindo, " . $_SESSION["nome"] .  ".</p>";
-    
+    if (isset($_COOKIE["nome"]))
+    {
+        echo "<p>Olá, " . $_COOKIE["nome"] . "</p>";
+    }
+    else {
+        header("Location: acessar.php");
+    }  
+
     ?>
 
 <a href="acessar.php">Voltar</a>
+<a href="close.php">Sair</a>
     
 </body>
 </html>

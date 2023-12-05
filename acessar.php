@@ -28,16 +28,17 @@
             {
                 $a = new Usuario();
 
-            if ($a->autenticarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == 0)
-            {
-                echo "<p>E-mail ou senha incorreto(s).</p>";                   
+                if ($a->autenticarUsuario($_REQUEST["email"], $_REQUEST["senha"]) == 0)
+                {
+                    echo "<p>E-mail ou senha incorreto(s).</p>";                   
+                }
+                else {
+                    $cookieName = "nome";
+                    $cookieValue = $a->getnome();
+                    setcookie($cookieName, $cookieValue, time() + 86400, "/");
+                    header("Location: areaUser.php");
+                }
             }
-            else {
-                session_start();
-                $_SESSION["nome"] = $a->getnome();
-                header("Location: areaUser.php");
-         }
-     }
 
  ?>
 

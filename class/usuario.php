@@ -16,7 +16,7 @@ class Usuario
          $this->email = $_email;
          $this->dtNascimento = $_dtNascimento;
          $this->cidade = $_cidade;
-         $this->senha = $_senha;
+         $this->senha = md5($_senha);
     }
 
 public function inserirUsuario()
