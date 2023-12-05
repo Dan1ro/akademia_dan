@@ -164,9 +164,25 @@ public function DeleteUser($_id)
 
 }
 
+public function autenticarUsuario($_email,$_senha) {
 
+    include_once("db/conn.php");
+    $sql = "CALL paUsuario('$_email','$_senha')";
+    $stmt = $conn->prepare($sql);
 
+    $stmt->execute(); 
 
+    if ($user = $stmt->fetch()) 
+    {
+        $this->nome = $user["nome"];
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+
+}
 
 }
 ?>
