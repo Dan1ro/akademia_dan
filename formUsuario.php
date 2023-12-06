@@ -65,6 +65,9 @@
         $u = new Usuario();
         $listarusuario = $u->listaruser1();
 
+        if ($listarusuario != false)
+        {
+
         echo "<table>
         <tr>
             <th>Nome</th>
@@ -89,6 +92,13 @@
         }
         
         echo "</table>";
+
+    }
+    else {
+
+        echo "Sistema indisponível no momento. Tente novamente mais tarde.";
+
+    }
 
     ?>
 

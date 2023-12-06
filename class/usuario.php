@@ -92,16 +92,23 @@ public function setsenha($_senha)
 
 public function listaruser1()
 {
+    try{
     include_once("db/conn.php");
 
     $sql = "CALL psUsuario('')";
     $data = $conn->query($sql)->fetchAll();
 
     return $data;
+    }
+    catch (Exception $e)
+    {
+        return false;
+    }
 }
 
 public function buscarUsuario($_id)
 {
+    try{
     include("db/conn.php");
 
     $sql = "CALL ps_Usuario2('$_id')";
@@ -116,6 +123,11 @@ public function buscarUsuario($_id)
     }
 
     return true;
+    }
+    catch (Exception $e)
+    {
+        return false;
+    }
 
 }
 
@@ -123,7 +135,7 @@ public function buscarUsuario($_id)
 
 public function atualizarUsuario($_id)
 {
-
+    try{
     include("db/conn.php");
     $sql = "CALL pu_Usuario(:id, :nome, :email, :dtNascimento, :cidade, :email)";
 
@@ -142,12 +154,19 @@ public function atualizarUsuario($_id)
     $statement->execute($data);
 
     return true;
+    }
+
+    catch (Exception $e) {
+
+        return false;
+    }
 
 }
 
 public function DeleteUser($_id)
 {
 
+    try{
     include_once("db/conn.php");
     $sql = "CALL pdUsuario(:idUsuario)";
 
@@ -161,11 +180,17 @@ public function DeleteUser($_id)
     $statement->execute($data);
 
     return true;
+}
+    catch (Exception $e)
+    {
+        return false;
+    }
 
 }
 
 public function autenticarUsuario($_email,$_senha) {
 
+    try {
     include_once("db/conn.php");
     $sql = "CALL paUsuario('$_email','$_senha')";
     $stmt = $conn->prepare($sql);
@@ -183,6 +208,11 @@ public function autenticarUsuario($_email,$_senha) {
     }
 
 }
+    catch (Exception $e)
+    {
+        return false;
+    }
 
+}
 }
 ?>
