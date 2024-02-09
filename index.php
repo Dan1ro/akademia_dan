@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Akademia</title>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,11 @@
 
     <header>
     <nav id="ancoras">
-        <a href>Início</a>
-        <a href>Serviços</a>
+        <a href="index.php">Início</a>
+        <a href>Modalidades</a>
         <a href>Planos</a>
         <a href>Eventos</a>
+        <a href="acessar.php">Área Restrita</a>
     </nav>
         <div id="imagem1">
          <img src="imagens/logo.png" width="110" height="110">
@@ -26,7 +27,10 @@
 
     </header>
 
-    <main>
+<main>
+    
+<section id="conteudo_principal">
+
     <img src="imagens/banner.png" width="1900">
 
     <div id="conteudos">
@@ -39,28 +43,35 @@
     <p>Bem-vindos à Akademia - o local onde seus objetivos de condicionamento físico se transformam em realidade! Somos uma academia de ginástica apaixonada por promover uma vida mais saudável e ativa para todos os nossos membros. Aqui na Akademia, você encontrará um ambiente acolhedor e motivador, repleto de equipamentos modernos, aulas desafiadoras e instrutores altamente qualificados. Independentemente do seu nível de aptidão ou idade, nossa missão é inspirá-lo a alcançar o melhor de si mesmo, oferecendo programas personalizados que se adaptam às suas necessidades individuais. Junte-se a nós e embarque nessa jornada emocionante em direção a um corpo mais forte, uma mente mais clara e uma vida cheia de energia e vitalidade. Seja bem-vindo à Akademia, onde o bem-estar se torna uma paixão compartilhada!</p>
     
     </div>
-
+</section>
     <div>
     <section id="sessao">
 
         <div id="subtitulo">
-        <h2>Nossas modalidades</h2>
+        <h2>Modalidades em destaque</h2>
         </div>
 
-        <article>
+        <div class="container">
+        <article class="article_modal">
         <img src="imagens/musculacao.png" width="400" height="400">  
+        <p class="txt_img">Musculação</p>
         </article>
         
-        <article>
+        <article class="article_modal">
         <img src="imagens/ginastica.png" width="400" height="400">
+        <p class="txt_img">Ginástica</p>
         </article>
         
-        <article>
+        <article class="article_modal">
         <img src="imagens/yoga.png" width="400" height="400"> 
+        <p class="txt_img">Yoga</p>
         </article>
-        
-
+        </div>
          </div>
+
+        <section id="botao_do_carai">
+        <button class="options">Confira todas as opções</button>
+        </section>
 
     </section>
 

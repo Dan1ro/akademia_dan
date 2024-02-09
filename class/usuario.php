@@ -188,6 +188,8 @@ public function DeleteUser($_id)
 
 }
 
+
+
 public function autenticarUsuario($_email,$_senha) {
 
     try {

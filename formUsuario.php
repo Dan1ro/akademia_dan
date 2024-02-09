@@ -12,10 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
     <script src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
 
     <title>Cadastrar</title>
 </head>
 <body>
+
 
 <main>
         <h1>Cadastrar Usuario</h1>
@@ -25,19 +30,19 @@
         <form method="POST">
 
         <label>Nome:</label>
-        <input type="text" name="nome" minlength="3" required><br><br>
+        <input id="texto" type="text" name="nome" minlength="3" required><br><br>
 
         <label>Email:</label>
-        <input type="text" name="email" minlength="3" required><br><br>
+        <input id="texto" type="text" name="email" minlength="3" required><br><br>
 
         <label>Dt Nasc:</label>
-        <input type="text" name="dtNascimento" minlength="3" required><br><br>
+        <input id="texto" type="text" name="dtNascimento" minlength="3" required><br><br>
 
         <label>Cidade:</label>
-        <input type="text" name="cidade" minlength="3" required><br><br>
+        <input id="texto" type="text" name="cidade" minlength="3" required><br><br>
 
         <label>Senha:</label>
-        <input type="text" name="senha" minlength="3" required><br><br>
+        <input id="texto" type="text" name="senha" minlength="3" required><br><br>
 
         <input type="submit" name="inserir" value="Cadastrar">
 
@@ -103,6 +108,9 @@
     ?>
 
 </main>
+
+
+
 
 </body>
 </html>
